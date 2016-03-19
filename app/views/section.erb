@@ -1,0 +1,10 @@
+<% sections = Section.all %>
+<% a = 1000000 %>
+<% b = 150 %>
+<% c = -900 %>
+
+<% sections.each do |section| %>
+	<div style=width:<%=(a*(section.x1-section.x2)).to_i.abs%>px;height:<%=(a*(section.y1-section.y2)).to_i.abs%>px;background-color:rgb(<%=section.home_runs*8%>,0,<%= 255 - section.home_runs*8 %>);stroke:purple;stroke-width:1px >
+
+	</div>
+<% end %>
